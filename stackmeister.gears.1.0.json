@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "stackmeister/gears": {
+            "manifest": {
+                "bundles": {
+                    "Stackmeister\\GearsBundle\\StackmeisterGearsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                }
+            },
+            "env": {
+                "STORAGE_URL": "local://%kernel.project_dir%/var/storage"
+            },
+            "files": {
+                "config/packages/stackmeister_gears.yaml": {
+                    "contents": [
+                        "stackmeister_gears:",
+                        "    storages:",
+                        "      default: '%env(resolve:STORAGE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff00"
+        }
+    }
+}
