@@ -8,7 +8,7 @@
                     ]
                 },
                 "env": {
-                    "STORAGE_URL": "local://%kernel.project_dir%/var/storage"
+                    "STORAGE_URL": "file://%kernel.project_dir%/var/storage"
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%"
