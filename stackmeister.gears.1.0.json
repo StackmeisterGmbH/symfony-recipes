@@ -7,12 +7,12 @@
                         "all"
                     ]
                 },
+                "env": {
+                    "STORAGE_URL": "local://%kernel.project_dir%/var/storage"
+                },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%"
                 }
-            },
-            "env": {
-                "STORAGE_URL": "local://%kernel.project_dir%/var/storage"
             },
             "files": {
                 "config/packages/stackmeister_gears.yaml": {
